@@ -30,7 +30,7 @@ a { color: inherit; }
 }
 .nav { height: 74px; display: flex; align-items: center; justify-content: space-between; }
 .brand { font-size: 25px; font-weight: 800; text-decoration: none; letter-spacing: -1px; }
-.brand span, h2 span, h1 em { color: #657b00; font-style: normal; }
+.brand span, h2 span, h1 em { color: var(--accent); font-style: normal; }
 .nav-links { display: flex; gap: 30px; }
 .nav-links a { text-decoration: none; font-size: 13px; font-weight: 700; }
 .nav-toggle { display: none; background: none; border: 0; font-size: 24px; }
