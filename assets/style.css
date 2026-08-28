@@ -48,8 +48,55 @@ h1 { font-size: clamp(58px, 8vw, 105px); line-height: .94; letter-spacing: -.065
 .button.secondary { background: transparent; }
 
 .hero-card {
-  min-height: 390px; background: var(--dark); color: white; padding: 34px;
-  position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; gap: 28px;
+  min-height: 520px;
+  background: var(--dark);
+  color: white;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.hero-photo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  flex: 1;
+  min-height: 380px;
+  overflow: hidden;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.hero-credential {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid rgba(255,255,255,.25);
+  padding-top: 16px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.credential-degree {
+  color: var(--accent);
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.credential-field {
+  color: #bfc0c5;
+  font-size: 12px;
 }
 .grid-glow {
   position: absolute; inset: 0; opacity: .45;
