@@ -124,87 +124,20 @@ h2 { font-size: clamp(42px, 5vw, 68px); line-height: 1; letter-spacing: -.055em;
 .timeline p { margin: 7px 0 0; color: #aeb0b6; }
 .timeline .company { color: var(--accent); font-weight: 700; }
 
-.project-intro {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 30px;
-  margin-bottom: 55px;
-}
-
-.project-intro p {
-  max-width: 360px;
-  color: var(--muted);
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 16px;
-}
-
-.project-card {
-  border: 1px solid var(--line);
-  padding: 32px;
-  min-height: 330px;
-  display: flex;
-  flex-direction: column;
-}
-
-.project-card.featured {
-  grid-row: span 2;
-  min-height: 676px;
-  background: var(--dark);
-  color: white;
-}
-
-.project-number {
-  font-family: "DM Mono", monospace;
-  font-size: 12px;
-  color: #999ba1;
-}
-
-.project-card .tag {
-  margin-top: 55px;
-  color: var(--accent);
-}
-
-.project-card.featured .tag {
-  color: var(--accent);
-}
-
-.project-card h3 {
-  font-size: 32px;
-  letter-spacing: -.04em;
-  margin: 8px 0 15px;
-}
-
-.project-card p:not(.tag) {
-  color: #65676d;
-}
-
-.project-card.featured p:not(.tag) {
-  color: #b9bbc0;
-}
-
-.project-meta {
-  margin-top: auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.project-meta span {
-  font-family: "DM Mono", monospace;
-  font-size: 10px;
-  border: 1px solid #d6d7da;
-  padding: 7px 9px;
-}
-
-.featured .project-meta span {
-  border-color: #45464b;
-  color: #d1d2d6;
-}
+.project-intro {display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 55px;}
+.project-intro p { max-width: 360px; color: var(--muted);}
+.project-grid { display: grid; grid-template-columns: 1.3fr 1fr;gap: 16px;}
+.project-card { border: 1px solid var(--line); padding: 32px; min-height: 330px; display: flex; flex-direction: column;}
+.project-card.featured {grid-row: span 2; min-height: 676px; background: var(--dark); color: white;}
+.project-number {font-family: "DM Mono", monospace; font-size: 12px; color: #999ba1;}
+.project-card .tag { margin-top: 55px; color: var(--accent);}
+.project-card.featured .tag { color: var(--accent);}
+.project-card h3 { font-size: 32px; letter-spacing: -.04em; margin: 8px 0 15px;}
+.project-card p:not(.tag) { color: #65676d;}
+.project-card.featured p:not(.tag) { color: #b9bbc0;}
+.project-meta { margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px;}
+.project-meta span { font-family: "DM Mono", monospace; font-size: 10px; border: 1px solid #d6d7da; padding: 7px 9px;}
+.featured .project-meta span { border-color: #45464b; color: #d1d2d6;}
 
 .section-accent { background: var(--accent); }
 .section-accent .section-label { color: #596800; }
@@ -218,17 +151,24 @@ h2 { font-size: clamp(42px, 5vw, 68px); line-height: 1; letter-spacing: -.055em;
 .footer { background: var(--dark); color: #9a9ca2; font-family: "DM Mono", monospace; font-size: 10px; padding: 25px 0; }
 .footer-inner { display: flex; justify-content: space-between; gap: 20px; }
 
+.certificates-list { border-top: 1px solid var(--line);}
+.certificate-item { display: grid; grid-template-columns: 180px 1fr 80px; align-items: center; gap: 30px; padding: 24px 0; border-bottom: 1px solid var(--line);}
+.certificate-company {font-family: 'DM Mono', monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted);}
+.certificate-item h3 {margin: 0; font-size: 1.05rem; font-weight: 600;}
+.certificate-date {font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--muted);text-align: right;}
+
+
 @media (max-width: 800px) {
   .container { width: min(calc(100% - 32px), var(--max)); }
   .nav-links { display: none; position: absolute; top: 74px; left: 0; right: 0; padding: 20px 16px; background: var(--paper); border-bottom: 1px solid var(--line); flex-direction: column; gap: 18px; }
   .nav-links.open { display: flex; }
   .nav-toggle { display: block; }
   .hero { grid-template-columns: 1fr; gap: 40px; padding: 70px 0; }
-
-  .hero-card {
-    min-height: 450px;
-  }
-
+  .hero-card {min-height: 450px;}
+  .certificate-item {grid-template-columns: 1fr auto; gap: 8px 20px;}
+  .certificate-company {grid-column: 1 / 2;}
+  .certificate-date {grid-column: 2 / 3;grid-row: 1;}
+  .certificate-item h3 {grid-column: 1 / -1;}
   .section { padding: 80px 0; }
   .two-col, .project-grid { grid-template-columns: 1fr; gap: 35px; }
   .project-card.featured { grid-row: auto; min-height: 420px; }
