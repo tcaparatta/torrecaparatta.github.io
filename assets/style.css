@@ -151,12 +151,45 @@ h2 { font-size: clamp(42px, 5vw, 68px); line-height: 1; letter-spacing: -.055em;
 .footer { background: var(--dark); color: #9a9ca2; font-family: "DM Mono", monospace; font-size: 10px; padding: 25px 0; }
 .footer-inner { display: flex; justify-content: space-between; gap: 20px; }
 
-.certificates-list { border-top: 1px solid var(--line);}
-.certificate-item { display: grid; grid-template-columns: 180px 1fr 80px; align-items: center; gap: 30px; padding: 24px 0; border-bottom: 1px solid var(--line);}
-.certificate-company {font-family: 'DM Mono', monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted);}
-.certificate-item h3 {margin: 0; font-size: 1.05rem; font-weight: 600;}
-.certificate-date {font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--muted);text-align: right;}
+.certificates-list {
+  border-top: 1px solid var(--line);
+}
 
+.certificate-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 30px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.certificate-company {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.certificate-info {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.certificate-info h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.certificate-date {
+  flex-shrink: 0;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
 
 @media (max-width: 800px) {
   .container { width: min(calc(100% - 32px), var(--max)); }
@@ -165,10 +198,19 @@ h2 { font-size: clamp(42px, 5vw, 68px); line-height: 1; letter-spacing: -.055em;
   .nav-toggle { display: block; }
   .hero { grid-template-columns: 1fr; gap: 40px; padding: 70px 0; }
   .hero-card {min-height: 450px;}
-  .certificate-item {grid-template-columns: 1fr auto; gap: 8px 20px;}
-  .certificate-company {grid-column: 1 / 2;}
-  .certificate-date {grid-column: 2 / 3;grid-row: 1;}
-  .certificate-item h3 {grid-column: 1 / -1;}
+  .certificate-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .certificate-info {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .certificate-info h3 {
+    font-size: 1rem;
+  }
   .section { padding: 80px 0; }
   .two-col, .project-grid { grid-template-columns: 1fr; gap: 35px; }
   .project-card.featured { grid-row: auto; min-height: 420px; }
