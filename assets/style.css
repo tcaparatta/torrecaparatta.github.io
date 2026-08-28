@@ -48,7 +48,7 @@ h1 { font-size: clamp(58px, 8vw, 105px); line-height: .94; letter-spacing: -.065
 .button.secondary { background: transparent; }
 
 .hero-card {
-  min-height: 450px;
+  min-height: 520px;
   background: var(--dark);
   color: white;
   padding: 24px;
@@ -57,7 +57,7 @@ h1 { font-size: clamp(58px, 8vw, 105px); line-height: .94; letter-spacing: -.065
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 20px;
+  gap: 0;
 }
 
 .hero-photo {
@@ -65,15 +65,15 @@ h1 { font-size: clamp(58px, 8vw, 105px); line-height: .94; letter-spacing: -.065
   z-index: 1;
   width: 100%;
   flex: 1;
-  min-height: 380px;
+  min-height: 400px;
   overflow: hidden;
 }
 
 .hero-photo img {
   width: 100%;
-  height: 100%;
+  height: 400px;
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
   display: block;
 }
 
@@ -81,7 +81,8 @@ h1 { font-size: clamp(58px, 8vw, 105px); line-height: .94; letter-spacing: -.065
   position: relative;
   z-index: 1;
   border-top: 1px solid rgba(255,255,255,.25);
-  padding-top: 16px;
+  padding-top: 8px;
+  margin-top: 12px
   display: flex;
   align-items: baseline;
   justify-content: space-between;
